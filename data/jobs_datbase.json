@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "title": "Software Developer",
+      "category": "Technology",
+      "description": "Develop and maintain software applications using various programming languages and frameworks.",
+      "required_skills": ["Python", "JavaScript", "SQL", "Git", "REST API"],
+      "min_experience": 1,
+      "salary_range": "$70,000 - $90,000"
+    },
+    {
+      "id": 2,
+      "title": "Data Scientist",
+      "category": "Data Science",
+      "description": "Analyze and interpret complex data to help organizations make better decisions.",
+      "required_skills": ["Python", "R", "SQL", "Machine Learning", "Statistics", "Data Visualization"],
+      "min_experience": 2,
+      "salary_range": "$80,000 - $110,000"
+    },
+    {
+      "id": 3,
+      "title": "UX Designer",
+      "category": "Design",
+      "description": "Create user-friendly interfaces and improve the overall user experience of products.",
+      "required_skills": ["UI Design", "User Research", "Wireframing", "Prototyping", "Figma"],
+      "min_experience": 1,
+      "salary_range": "$65,000 - $85,000"
+    },
+    {
+      "id": 4,
+      "title": "Marketing Specialist",
+      "category": "Marketing",
+      "description": "Develop and implement marketing strategies to promote products or services.",
+      "required_skills": ["Social Media Marketing", "Content Creation", "SEO", "Analytics", "Email Marketing"],
+      "min_experience": 1,
+      "salary_range": "$55,000 - $75,000"
+    },
+    {
+      "id": 5,
+      "title": "Backend Developer",
+      "category": "Technology",
+      "description": "Design and implement server-side applications and databases.",
+      "required_skills": ["Java", "Spring Boot", "SQL", "Redis", "API Design", "Git"],
+      "min_experience": 2,
+      "salary_range": "$75,000 - $95,000"
+    },
+    {
+      "id": 6,
+      "title": "Frontend Developer",
+      "category": "Technology",
+      "description": "Build responsive and interactive user interfaces for web applications.",
+      "required_skills": ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Git"],
+      "min_experience": 1,
+      "salary_range": "$65,000 - $90,000"
+    },
+    {
+      "id": 7,
+      "title": "Project Manager",
+      "category": "Management",
+      "description": "Plan, execute, and close projects while ensuring they are delivered on time and within budget.",
+      "required_skills": ["Project Planning", "Team Management", "Budgeting", "Risk Management", "Communication"],
+      "min_experience": 3,
+      "salary_range": "$85,000 - $120,000"
+    },
+    {
+      "id": 8,
+      "title": "Data Analyst",
+      "category": "Data Science",
+      "description": "Collect, process, and analyze data to help businesses make better decisions.",
+      "required_skills": ["SQL", "Excel", "Data Visualization", "Statistics", "Python"],
+      "min_experience": 1,
+      "salary_range": "$60,000 - $80,000"
+    },
+    {
+      "id": 9,
+      "title": "Product Manager",
+      "category": "Management",
+      "description": "Lead the development of products from conception to launch, ensuring they meet market needs.",
+      "required_skills": ["Product Strategy", "User Research", "Roadmapping", "Agile Methodologies", "Communication"],
+      "min_experience": 3,
+      "salary_range": "$90,000 - $130,000"
+    },
+    {
+      "id": 10,
+      "title": "Content Writer",
+      "category": "Marketing",
+      "description": "Create engaging and informative content for various channels and audiences.",
+      "required_skills": ["Copywriting", "SEO Writing", "Content Strategy", "Editing", "Research"],
+      "min_experience": 1,
+      "salary_range": "$50,000 - $70,000"
+    }
+  ]
+  

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance Expert System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Career Guidance Expert System</h1>
+        <p>Find job recommendations based on your skills and interests</p>
+        
+        <form action="{{ url_for('match_jobs') }}" method="post">
+            <div class="form-group">
+                <label for="skills">Select your skills:</label>
+                <select name="skills" id="skills" multiple size="8" required>
+                    {% for skill in skills %}
+                    <option value="{{ skill }}">{{ skill }}</option>
+                    {% endfor %}
+                </select>
+                <small>Hold Ctrl (or Cmd on Mac) to select multiple skills</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">Years of experience:</label>
+                <input type="number" name="experience" id="experience" min="0" max="40" value="0">
+            </div>
+            
+            <div class="form-group">
+                <label for="interests">Your interests and preferences:</label>
+                <textarea name="interests" id="interests" rows="4" placeholder="Describe your career interests, work preferences, etc."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="categories">Preferred job categories:</label>
+                <select name="categories" id="categories" multiple size="5">
+                    {% for category in categories %}
+                    <option value="{{ category }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+                <small>Optional: Select job categories you're interested in</small>
+            </div>
+            
+            <button type="submit" class="btn">Find Job Matches</button>
+        </form>
+    </div>
+</body>
+</html>

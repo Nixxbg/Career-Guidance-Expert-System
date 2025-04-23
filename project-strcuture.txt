@@ -1,0 +1,14 @@
+career_guidance_expert_system/
+├── app.py                  # Main Flask application
+├── requirements.txt        # Project dependencies
+├── static/                 # Static files (CSS, JS)
+│   └── styles.css
+├── templates/              # HTML templates
+│   ├── index.html          # Home page with user input form
+│   └── results.html        # Results page showing job matches
+├── models/
+│   ├── __init__.py
+│   ├── job_matcher.py      # Cosine similarity implementation
+│   └── rule_matcher.py     # Rule-based matching implementation
+└── data/
+    └── jobs_database.json  # Sample job dataset

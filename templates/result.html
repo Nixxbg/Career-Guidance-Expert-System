@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommendations - Career Guidance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Job Recommendations</h1>
+        
+        <div class="profile-summary">
+            <h2>Your Profile</h2>
+            <p><strong>Skills:</strong> {{ ", ".join(user_profile['skills']) }}</p>
+            <p><strong>Experience:</strong> {{ user_profile['experience'] }} years</p>
+            {% if user_profile['interests'] %}
+            <p><strong>Interests:</strong> {{ user_profile['interests'] }}</p>
+            {% endif %}
+        </div>
+        
+        <h2>Job Matches</h2>
+        
+        {% if matches %}
+            <div class="job-matches">
+                {% for job in matches %}
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>{{ job['title'] }}</h3>
+                        <span class="match-score">{{ job['match_percentage'] }}% Match</span>
+                    </div>
+                    
+                    <p class="job-category">{{ job['category'] }}</p>
+                    <p class="job-description">{{ job['description'] }}</p>
+                    
+                    <div class="job-details">
+                        <p><strong>Required Skills:</strong> {{ ", ".join(job['required_skills']) }}</p>
+                        <p><strong>Experience Required:</strong> {{ job['min_experience'] }} years</p>
+                        <p><strong>Salary Range:</strong> {{ job['salary_range'] }}</p>
+                    </div>
+                    
+                    {% if job['skill_gaps'] %}
+                    <div class="skill-gaps">
+                        <h4>Skills to Develop:</h4>
+                        <ul>
+                            {% for skill in job['skill_gaps'] %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if job['experience_gap'] > 0 %}
+                    <div class="experience-gap">
+                        <p>You need {{ job['experience_gap'] }} more years of experience for this role.</p>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No job matches found based on your profile. Try selecting different skills or categories.</p>
+        {% endif %}
+        
+        <a href="{{ url_for('index') }}" class="btn">Back to Search</a>
+    </div>
+</body>
+</html>
